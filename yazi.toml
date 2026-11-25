@@ -1,0 +1,219 @@
+# Color mapping based on Whitegold theme
+
+schema = "https://yazi-rs.github.io/schemas/theme.json"
+
+[app]
+overall = { fg = "#cfbfff" }
+
+[mgr]
+cwd = { fg = "#cfbfff" } # accent
+find_keyword = { fg = "#91760d", bold = true, italic = true, underline = true } # cursor
+find_position = { fg = "#cfbfff", bg = "#0c0b0c", bold = true, italic = true } # accent / background
+symlink_target = { italic = true, fg = "#cfbfff" } # accent
+
+marker_copied   = { fg = "#cfbfff", bg = "#00C20C" } # accent / background
+marker_cut      = { fg = "#91760d", bg = "#FF0000" } # cursor / background
+marker_marked   = { fg = "#9a9078", bg = "#FF008E" } # selection_background / background
+marker_selected = { fg = "#9a9078", bg = "#00E6B6" } # selection_background / background
+
+count_copied   = { fg = "#cfbfff", bg = "#cfbfff" } # foreground / accent
+count_cut      = { fg = "#cfbfff", bg = "#91760d" } # foreground / cursor
+count_selected = { fg = "#cfbfff", bg = "#9a9078" } # foreground / selection_background
+
+border_symbol = "│"
+border_style = { fg = "#cfbfff" } # selection_background
+syntect_theme = ""
+
+[tabs]
+active   = { fg = "#0c0b0c", bg = "#cfbfff", bold = true } # background / accent
+inactive = { fg = "#cfbfff", bg = "#9a9078" } # foreground / selection_background
+
+sep_inner = { open = "▐", close = "▌", fg = "#cfbfff" } # accent
+sep_outer = { open = "▐", close = "▌", fg = "#9a9078" } # selection_background
+
+[mode]
+normal_main = { fg = "#0c0b0c", bg = "#cfbfff", bold = true } # background / accent
+normal_alt  = { fg = "#cfbfff", bg = "#1a2224", bold = true } # foreground / selection_background
+
+select_main = { bg = "#91760d", bold = true } # cursor
+select_alt  = { fg = "#cfbfff", bg = "#0c0b0c", bold = true } # foreground / selection_background
+
+unset_main = { bg = "#91760d", bold = true } # cursor
+unset_alt  = { fg = "#cfbfff", bg = "#0c0b0c", bold = true } # foreground / selection_background
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "▐", close = "▌" }
+
+[status]
+overall   = { fg = "#cfbfff" } # foreground / background
+sep_left  = { open = "▐", close = "▌", fg = "#cfbfff" } # selection_background
+sep_right = { open = "▐", close = "▌", fg = "#cfbfff" } # selection_background
+
+perm_sep   = { fg = "#9a9078" } # selection_background
+perm_type  = { fg = "#cfbfff" } # accent
+perm_read  = { fg = "#91760d" } # cursor
+perm_write = { fg = "#7e0507" } # color1 (červená z palety)
+perm_exec  = { fg = "#2E311A" } # color3 (tmavozelená z palety)
+
+progress_label  = { bold = true, fg = "#cfbfff" } # foreground
+progress_normal = { fg = "#cfbfff", bg = "#0c0b0c" } # accent / selection_background
+progress_error  = { fg = "#0c0b0c", bg = "#7e0507" } # background / color1
+
+[which]
+# mask            = { bg = "#0c0b0c" } # selection_background
+cand            = { fg = "#4CE0A3" } # foreground
+rest            = { fg = "#0c0b0c" } # selection_background
+desc            = { fg = "#cfbfff" } # accent
+separator_style = { fg = "#565656" } # selection_background
+border          = { fg = "#cfbfff" } # accent
+
+[confirm]
+border     = { fg = "#cfbfff" } # accent
+title      = { fg = "#cfbfff" } # foreground
+body       = { fg = "#cfbfff" } # foreground
+list       = { fg = "#cfbfff" } # foreground
+btn_yes    = { reversed = true, fg = "#0c0b0c", bg = "#cfbfff" } # background / accent
+btn_no     = { fg = "#cfbfff", bg = "#0c0b0c" } # foreground / background
+
+[spot]
+border = { fg = "#cfbfff" } # accent
+title  = { fg = "#cfbfff" } # foreground
+tbl_col  = { fg = "#cfbfff" } # accent
+tbl_cell = { fg = "#91760d", reversed = true } # cursor
+
+[notify]
+title_info  = { fg = "#cfbfff" } # accent
+title_warn  = { fg = "#91760d" } # cursor
+title_error = { fg = "#7e0507" } # color1
+
+[pick]
+border   = { fg = "#cfbfff" } # accent
+active   = { fg = "#cfbfff", bg = "#0c0b0c", bold = true } # foreground / selection_background
+inactive = { fg = "#cfbfff" } # foreground
+
+[input]
+border   = { fg = "#cfbfff" } # accent
+title    = { fg = "#cfbfff" } # foreground
+value    = { fg = "#cfbfff" } # foreground
+selected = { reversed = true, fg = "#0c0b0c", bg = "#cfbfff" } # background / accent
+
+[cmp]
+border   = { fg = "#cfbfff" } # accent
+active   = { reversed = true, fg = "#0c0b0c", bg = "#cfbfff" } # background / accent
+inactive = { fg = "#cfbfff" } # foreground
+
+[tasks]
+border  = { fg = "#cfbfff" } # accent
+title   = { fg = "#cfbfff" } # foreground
+hovered = { fg = "#cfbfff", bold = true } # accent
+
+[help]
+on      = { fg = "#cfbfff" } # accent
+run     = { fg = "#91760d" } # cursor
+desc    = { fg = "#cfbfff" } # foreground
+hovered = { reversed = true, fg = "#0c0b0c", bg = "#cfbfff", bold = true } # background / accent
+footer  = { fg = "#0c0b0c", bg = "#cfbfff" } # background / foreground
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#ffcd77" }, # cursor
+	{ mime = "{audio,video}/*", fg = "#ba91ca", bold = true }, # accent
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#7e0507" }, # color1
+	{ mime = "application/{pdf,doc,rtf}", fg = "#bcbcbc", bold = true }, # color3
+	{ mime = "vfs/{absent,stale}", fg = "#9a9078" }, # selection_background
+  { url = "*.{srt,sub,vtt}", fg = "#74B5B5" },
+  { url = "*.{odt,ods,odp}", fg = "#4CE0A3", bold = true },
+	{ url = "*.lua", fg = "#449694" },
+	{ url = "*.toml", fg = "#449694" },
+	{ url = "*.sh", fg = "#609c65" },
+	{ url = "*.txt", fg = "#ababab" },
+	{ url = "*.conf", fg = "#ababab" },
+	{ url = "*.iso", fg = "#ae6663" },
+  { url = "*", is = "orphan", bg = "#7e0507" }, # color1
+	{ url = "*", is = "exec"  , fg = "#cfbfff" }, # accent
+	{ url = "*", is = "dummy", bg = "#7e0507" }, # color1
+	{ url = "*/", is = "dummy", bg = "#7e0507" }, # color1
+	{ url = "*/", fg = "#cfbfff", bold = true }, # foreground
+	{ url = "*", fg = "#ababab" }, # fallback pre ostatné súbory bez prípony / všeobecné súbory
+]
+
+# [icon]
+# dirs  = [
+# 	{ name = ".config", text = " ", fg = "#91760d" }, # cursor
+# 	{ name = ".git", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = ".github", text = " ", fg = "#2E311A" }, # color3
+# 	{ name = "Desktop", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = "Development", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = "Documents", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = "Downloads", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = "Pictures", text = " ", fg = "#cfbfff" }, # accent
+# 	{ name = "Videos", text = " ", fg = "#cfbfff" }, # accent
+#   { name = "Templates", text = " ", fg = "#cfbfff" }, # accent
+# ]
+[icon]
+dirs  = [
+	{ name = ".config", text = " ", fg = "#d48f66" }, # cursor
+	{ name = ".git", text = " ", fg = "#cfbfff" }, # accent
+	{ name = ".github", text = " ", fg = "#2E311A" }, # color3
+	{ name = "Desktop", text = " ", fg = "#cfbfff" }, # accent
+	{ name = "Development", text = " ", fg = "#cfbfff" }, # accent
+	{ name = "Documents", text = " ", fg = "#cfbfff" }, # accent
+	{ name = "Downloads", text = " ", fg = "#cfbfff" }, # accent
+	{ name = "Pictures", text = " ", fg = "#cfbfff" }, # accent
+	{ name = "Videos", text = " ", fg = "#cfbfff" }, # accent
+  { name = "Templates", text = " ", fg = "#cfbfff" }, # accent
+]
+files = [
+  { name = ".bashrc", text = " ", fg = "#cfbfff" }, # accent
+  { name = ".gitconfig", text = " ", fg = "#7e0507" }, # color1
+  { name = ".gitignore", text = " ", fg = "#7e0507" }, # color1
+  { name = "PKGBUILD", text = " ", fg = "#2E311A" }, # color3
+  { name = "license", text = " ", fg = "#91760d" }, # cursor
+  { name = "readme", text = "󰂺 ", fg = "#cfbfff" }, # foreground
+  { name = "toml", text = " ", fg = "#449694" }, # cursor
+  { name = "yaml", text = " ", fg = "#449694" }, # accent
+  { name = "yml", text = " ", fg = "#cfbfff" }, # accent
+  { name = "zip", text = " ", fg = "#7e0507" }, # color1
+  { name = ".conf", text = " ", fg = "#ababab" },
+]
+exts = [
+	{ name = "mp3", text = " ", fg = "#ba91ca" }, # accent
+	{ name = "mp4", text = " ", fg = "#ba91ca" }, # cursor
+	{ name = "webm", text = " ", fg = "#ba91ca" }, # cursor
+	{ name = "pdf", text = " ", fg = "#AD4C4C" }, # color1
+	{ name = "py", text = " ", fg = "#cfbfff" }, # accent
+  { name = "sh", text = " ", fg = "#609c65" }, # accent
+  { name = "zip", text = " ", fg = "#7e0507" }, # color1
+  { name = "webp", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "gif", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "jpg", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "jpeg", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "png", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "jxl", text = " ", fg = "#ffcd77" }, # foreground
+  { name = "odt", text = " ", fg = "#4CE0A3" }, # foreground
+  { name = "toml", text = " ", fg = "#449694" }, # cursor
+  { name = "json", text = " ", fg = "#91760d" },
+  { name = "lua", text = " ", fg = "#449694" },
+	{ name = "txt", text = " ", fg = "#ababab" },
+	{ name = "conf", text = " ", fg = "#ababab" },
+  { name = "srt", text = "󰨖 ", fg = "#74B5B5" }, # foreground
+  { name = "vtt", text = "󰨖 ", fg = "#74B5B5" }, # foreground
+  { name = "sub", text = "󰨖 ", fg = "#74B5B5" }, # foreground
+  { name = "iso", text = " ", fg = "#ae6663" }, # foreground
+]
+conds = [
+	{ if = "orphan", text = " ", fg = "#9a9078" }, # selection_background
+	{ if = "link", text = " ", fg = "#9a9078" }, # selection_background
+	{ if = "block", text = " ", fg = "#91760d" }, # cursor
+	{ if = "char", text = " ", fg = "#91760d" }, # cursor
+	{ if = "fifo", text = " ", fg = "#91760d" }, # cursor
+	{ if = "sock", text = " ", fg = "#91760d" }, # cursor
+	{ if = "sticky", text = " ", fg = "#91760d" }, # cursor
+	{ if = "dummy", text = " ", fg = "#7e0507" }, # color1
+	{ if = "dir", text = " ", fg = "#cfbfff" }, # accent
+	{ if = "exec", text = " ", fg = "#609c65" }, # accent
+	{ if = "!dir", text = " " }, # foreground
+]
