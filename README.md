@@ -5,4 +5,4 @@
 ## Installation
 
 ```bash
-omarchy-theme-install [https://github.com/Wallkerock/omarchy-priscilla-theme](https://github.com/Wallkerock/omarchy-priscilla-theme)
+omarchy theme install [https://github.com/Wallkerock/omarchy-priscilla-theme](https://github.com/Wallkerock/omarchy-priscilla-theme)
